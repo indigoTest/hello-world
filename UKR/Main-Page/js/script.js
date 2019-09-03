@@ -39,7 +39,7 @@ menuViber.addEventListener('click', () => {
     alert('Номер скопійовано до буферу обміну');
 });
 
-adaptiveViber.addEventListener('click', () => {
+adaptiveViber.addEventListener('touchstart', () => {
     updateClipboard('(050) 609 33 98');
     alert('Номер скопійовано до буферу обміну');
 });
