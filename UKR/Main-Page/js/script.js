@@ -34,15 +34,18 @@ ok.addEventListener('click', () => {
     ok.classList.remove('button-cursor');
 });
 
-menuViber.addEventListener('touchstart click', () => {
+menuViber.addEventListener('touchstart mousedown', () => {
     // updateClipboard('(050) 609 33 98');
     alert('Номер скопійовано до буферу обміну');
 });
 
-adaptiveViber.addEventListener('touchstart click', e=>{
+adaptiveViber.addEventListener('touchstart mousedown', e=>{
     // updateClipboard('(050) 609 33 98');
     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
     alert('Номер скопійовано до буферу обміну');
 });
 
+document.querySelector('#click-me').addEventListener('touchstart mousedown', () => {
+    alert('ah shit here we go again');
+});
 
