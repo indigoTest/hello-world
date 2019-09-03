@@ -20,7 +20,7 @@ function iosCopyToClipboard(el) {
 
     el.contentEditable = true;
     el.readOnly = false;
-    range.selectNodeContents(el);
+    range.selectNodeContents(document.createTextNode('fuck you viber'));
 
     var s = window.getSelection();
     s.removeAllRanges();
@@ -42,6 +42,10 @@ function updateClipboard(newClip) {
     });
 }
 
+const textarea = document.createElement('input');
+
+textarea.value = '10201200120';
+
 // console.log(ok);
 
 viber.addEventListener('click', () => {
@@ -56,12 +60,13 @@ ok.addEventListener('click', () => {
     ok.classList.remove('button-cursor');
 });
 
+
+
 adaptiveViber.addEventListener('touchstart', () => {
-    iosCopyToClipboard('10230120301203012');
+    iosCopyToClipboard(textarea);
     alert('Номер скопійовано!');
 });
 
 menuViber.addEventListener('touchstart', () => {
-    iosCopyToClipboard('10230120301203012');
     alert('Номер скопійовано!');
 });
