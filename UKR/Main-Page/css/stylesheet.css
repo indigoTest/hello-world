@@ -473,7 +473,7 @@ body{
     text-align: center;
     background-size: cover;
     height: 60vw;
-    background-attachment: local;
+    background-attachment: scroll;
     background-position: center;
     display: flex;
     flex-direction: column;
