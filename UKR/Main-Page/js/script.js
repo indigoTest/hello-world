@@ -51,6 +51,13 @@ $(adaptiveViber).on("touchstart mousedown", (e)=>{
     alert('Номер скопійовано до буферу обміну');
 });
 
+$('#click-me').on("touchstart mousedown", (e)=>{
+    updateClipboard('(050) 609 33 98');
+    e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
+    alert('Номер скопійовано до буферу обміну');
+});
+
+
 
 // ('touchstart', (e) => {
 //     updateClipboard('(050) 609 33 98');
