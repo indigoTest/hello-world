@@ -34,31 +34,15 @@ ok.addEventListener('click', () => {
     ok.classList.remove('button-cursor');
 });
 
-
-// adaptiveViber.addEventListener('touchstart mousedown', e=>{
-//     // updateClipboard('(050) 609 33 98');
-//     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
-//     alert('Номер скопійовано до буферу обміну');
-// });
-//
-
-
 adaptiveViber.addEventListener('touchstart', () => {
-    alert('0984348384838 Скопіюй Мене!');
+    let result = document.execCommand('copy', false, '066 442 57 38');
+    if (result === true){
+        alert('Номер скопійовано!');
+    } else{
+        alert('Скопіюйте цей номер:      (067) 442 57 38')
+    }
 });
 
 menuViber.addEventListener('touchstart', () => {
-    alert('0984348384838 Скопіюй Мене!');
+    alert('Номер скопійовано!');
 });
-
-
-
-
-
-// document.querySelector('#click-me').addEventListener('mousedown', () => {
-//     alert('please help');
-// });
-
-// $('#click-me').ontouchstart('touchstart mousedown', e=>{
-//    alert('ah shit here we go again');
-// });
