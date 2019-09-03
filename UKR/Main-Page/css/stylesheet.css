@@ -469,14 +469,23 @@ body{
 }
 
 .slogan-section{
-    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)),  url("../../../Images/bg2.png") fixed no-repeat;
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0.5))), url(../../../Images/bg2.png) fixed no-repeat;
+    background: -o-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)), url(../../../Images/bg2.png) fixed no-repeat;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0.5)), url(../../../Images/bg2.png) fixed no-repeat;
     text-align: center;
     background-size: cover;
     height: 60vw;
     background-attachment: fixed;
     background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
 }
 
