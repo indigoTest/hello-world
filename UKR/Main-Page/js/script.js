@@ -45,11 +45,11 @@ ok.addEventListener('click', () => {
 //     alert('Номер скопійовано до буферу обміну');
 // });
 //
-document.querySelector('#click-me').addEventListener('touchstart mousedown', () => {
+document.querySelector('#click-me').addEventListener('touchstart', () => {
     alert('please help');
 });
 
 
-$('#click-me').ontouchstart('touchstart mousedown', e=>{
-   alert('ah shit here we go again');
-});
+// $('#click-me').ontouchstart('touchstart mousedown', e=>{
+//    alert('ah shit here we go again');
+// });
