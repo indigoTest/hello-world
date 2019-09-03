@@ -53,6 +53,7 @@ $(adaptiveViber).on("touchstart mousedown", (e)=>{
 
 $('#click-me').on("touchstart mousedown", (e)=>{
     // updateClipboard('(050) 609 33 98');
+    $('#click-me').after(navigator.platform);
     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
     alert('Номер скопійовано до буферу обміну');
 });
