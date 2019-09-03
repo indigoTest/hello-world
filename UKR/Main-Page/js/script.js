@@ -13,6 +13,27 @@ const ok = document.querySelector('.ok-button');
 const menuViber = document.querySelector('#menuViber');
 const adaptiveViber = document.querySelector('#adaptive-viber');
 
+function iosCopyToClipboard(el) {
+    var oldContentEditable = el.contentEditable,
+        oldReadOnly = el.readOnly,
+        range = document.createRange();
+
+    el.contentEditable = true;
+    el.readOnly = false;
+    range.selectNodeContents(el);
+
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+
+    el.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+
+    el.contentEditable = oldContentEditable;
+    el.readOnly = oldReadOnly;
+
+    document.execCommand('copy');
+}
+
 function updateClipboard(newClip) {
     navigator.clipboard.writeText(newClip).then(function() {
         /* clipboard successfully set */
@@ -36,14 +57,11 @@ ok.addEventListener('click', () => {
 });
 
 adaptiveViber.addEventListener('touchstart', () => {
-    let result = document.execCommand('copy', false, '066 442 57 38');
-    if (result === true){
-        alert('Номер скопійовано!');
-    } else{
-        alert('Скопіюйте цей номер:      (067) 442 57 38')
-    }
+    iosCopyToClipboard('10230120301203012');
+    alert('Номер скопійовано!');
 });
 
 menuViber.addEventListener('touchstart', () => {
+    iosCopyToClipboard('10230120301203012');
     alert('Номер скопійовано!');
 });
