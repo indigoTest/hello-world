@@ -34,34 +34,15 @@ ok.addEventListener('click', () => {
     ok.classList.remove('button-cursor');
 });
 
-menuViber.addEventListener('click', () => {
-    updateClipboard('(050) 609 33 98');
+menuViber.addEventListener('touchstart click', () => {
+    // updateClipboard('(050) 609 33 98');
     alert('Номер скопійовано до буферу обміну');
 });
 
-// adaptiveViber.ontouchstart = e=>{
-//     updateClipboard('(050) 609 33 98');
-//     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
-//     alert('Номер скопійовано до буферу обміну');
-// };
-
-$(adaptiveViber).on("touchstart mousedown", (e)=>{
+adaptiveViber.addEventListener('touchstart click', = e=>{
     // updateClipboard('(050) 609 33 98');
     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
     alert('Номер скопійовано до буферу обміну');
 });
 
-$('#click-me').on("touchstart mousedown", (e)=>{
-    // updateClipboard('(050) 609 33 98');
-    $('#click-me').after(navigator.platform);
-    e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
-    alert('Номер скопійовано до буферу обміну');
-});
 
-
-
-// ('touchstart', (e) => {
-//     updateClipboard('(050) 609 33 98');
-//     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
-//     alert('Номер скопійовано до буферу обміну');
-// });
