@@ -811,6 +811,7 @@ rgba(0,0,0,0.5)
 
 #adaptive-viber {
     display: inline;
+    cursor: pointer;
 }
 
 /****************** Header Menu *********************/
