@@ -11,8 +11,8 @@ body{
 }
 
 .hidden-body {
-    /*overflow: hidden;*/
-    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .page-dimensions{
