@@ -335,7 +335,8 @@ body{
 
 .menu-flex-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 40px;
     height: 100%;
 }
 
@@ -353,6 +354,11 @@ body{
     align-items: center;
 }
 
+.menu-icon{
+    color: #4679ee;
+
+}
+
 .menu-blue-line {
     border: 1px solid #4585ff;
     width: 35px;
@@ -360,9 +366,9 @@ body{
     background-color: #4585ff;
 }
 
-/*a:visited {*/
-/*    color: #056cff;*/
-/*}*/
+a:visited {
+    color: #056cff;
+}
 
 .menu-lower-text {
     display: block;
@@ -371,6 +377,10 @@ body{
 
 .menu-email {
     font-size: 2vh;
+}
+
+.hidden {
+    display: none;
 }
 
 /********************************First picture section************************************/
@@ -616,7 +626,12 @@ body{
     border: 3px solid #4679ee;
 }
 
+
 /****************************************Footer***********************************************/
+.footer-phone-number{
+    color: white;
+    display: block;
+}
 
 footer {
     background-color: #4679ee;

@@ -1,6 +1,7 @@
 document.querySelector('.header-menu-bars').onclick = function () {
     this.classList.toggle('active');
     document.querySelector(".menu").classList.toggle('menu-active');
+    document.body.classList.toggle('hidden-body');
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
