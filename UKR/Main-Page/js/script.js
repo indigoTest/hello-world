@@ -34,6 +34,21 @@ ok.addEventListener('click', () => {
     ok.classList.remove('button-cursor');
 });
 
+
+const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+if (isiOS){
+    menuViber.addEventListener('touchstart', () => {
+        updateClipboard('(050) 609 33 98');
+        alert('Номер скопійовано до буферу обміну');
+    });
+
+    adaptiveViber.addEventListener('touchstart', () => {
+        updateClipboard('(050) 609 33 98');
+        alert('Номер скопійовано до буферу обміну');
+    });
+}
+
+
 menuViber.addEventListener('click', () => {
     updateClipboard('(050) 609 33 98');
     alert('Номер скопійовано до буферу обміну');
@@ -43,3 +58,4 @@ adaptiveViber.addEventListener('click', () => {
     updateClipboard('(050) 609 33 98');
     alert('Номер скопійовано до буферу обміну');
 });
+
