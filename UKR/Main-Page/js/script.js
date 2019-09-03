@@ -39,7 +39,7 @@ menuViber.addEventListener('touchstart click', () => {
     alert('Номер скопійовано до буферу обміну');
 });
 
-adaptiveViber.addEventListener('touchstart click', = e=>{
+adaptiveViber.addEventListener('touchstart click', e=>{
     // updateClipboard('(050) 609 33 98');
     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
     alert('Номер скопійовано до буферу обміну');
