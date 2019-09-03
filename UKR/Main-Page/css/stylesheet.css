@@ -478,7 +478,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .slogan-text{
@@ -788,7 +787,7 @@ footer {
 .qr-block-active {
     display: block;
     height: 100%;
-    rgba(0,0,0,0.5)
+rgba(0,0,0,0.5)
 }
 
 .qr-text {
@@ -1160,7 +1159,6 @@ footer {
 
     .adaptive-nav-bar {
         display: none;
-        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     }
 
     .page-dimensions {
