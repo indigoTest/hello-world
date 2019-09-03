@@ -13,9 +13,9 @@ const menuViber = document.querySelector('#menuViber');
 const adaptiveViber = document.querySelector('#adaptive-viber');
 
 function updateClipboard(newClip) {
-    navigator.clipboard.writeText(newClip).then(function() {
+    navigator.clipboard.writeText(newClip).then(function () {
         /* clipboard successfully set */
-    }, function() {
+    }, function () {
         /* clipboard write failed */
     });
 }
@@ -23,30 +23,31 @@ function updateClipboard(newClip) {
 // console.log(ok);
 
 viber.addEventListener('click', () => {
-   // qrBlock.classList.add('qr-block-active');
-   qr.classList.add('qr-active');
-   ok.classList.add('button-cursor');
+    // qrBlock.classList.add('qr-block-active');
+    qr.classList.add('qr-active');
+    ok.classList.add('button-cursor');
 });
 
 ok.addEventListener('click', () => {
-   // qrBlock.classList.remove('qr-block-active');
-   qr.classList.remove('qr-active');
+    // qrBlock.classList.remove('qr-block-active');
+    qr.classList.remove('qr-active');
     ok.classList.remove('button-cursor');
 });
 
 
-const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-if (isiOS){
-    menuViber.addEventListener('touchstart', () => {
-        updateClipboard('(050) 609 33 98');
-        alert('Номер скопійовано до буферу обміну');
-    });
+// const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+//
+// console.log(isiOS);
 
-    adaptiveViber.addEventListener('touchstart', () => {
-        updateClipboard('(050) 609 33 98');
-        alert('Номер скопійовано до буферу обміну');
-    });
-}
+menuViber.addEventListener('touchstart', () => {
+    updateClipboard('(050) 609 33 98');
+    alert('Номер скопійовано до буферу обміну');
+});
+
+adaptiveViber.addEventListener('touchstart', () => {
+    updateClipboard('(050) 609 33 98');
+    alert('Номер скопійовано до буферу обміну');
+});
 
 
 menuViber.addEventListener('click', () => {
