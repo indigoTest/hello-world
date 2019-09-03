@@ -39,11 +39,17 @@ menuViber.addEventListener('click', () => {
     alert('Номер скопійовано до буферу обміну');
 });
 
-adaptiveViber.ontouchstart = e=>{
+// adaptiveViber.ontouchstart = e=>{
+//     updateClipboard('(050) 609 33 98');
+//     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
+//     alert('Номер скопійовано до буферу обміну');
+// };
+
+$(adaptiveViber).on("touchstart click", (e)=>{
     updateClipboard('(050) 609 33 98');
     e.target.before('sdkjfbsdkjfbdskjfbkdjsfbkjsdfbkjsdfbkjdsbfkjdsbfjkdsbfkjsdbfjkdbsjkfbdsjkfbdsjkfbjkdsfbjksdbfjkdsbfjkdsbfjksdbfjkdsbkjfbsdjkfbdskjfbkjdsbfkjsdbfkjsdbfkjsdbfkjdsbfjksdbfkjsdbfksdbfkjsdbfkjsdbfjkdsbf');
     alert('Номер скопійовано до буферу обміну');
-};
+});
 
 
 // ('touchstart', (e) => {
