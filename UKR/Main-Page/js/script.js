@@ -1,7 +1,7 @@
 document.querySelector('.header-menu-bars').onclick = function () {
     this.classList.toggle('active');
     document.querySelector(".menu").classList.toggle('menu-active');
-    document.body.classList.toggle('hidden-body');
+    document.querySelector('#hidden-wrapper').classList.toggle('hidden-body');
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,12 +58,12 @@ ok.addEventListener('click', () => {
 const clipboard = new ClipboardJS('#adaptive-viber');
 
 clipboard.on('success', function(e) {
-    alert('Suffering from success');
+    alert('Номер Вайберу скопійовано у буфер обміну!');
     e.clearSelection();
 });
 
 clipboard.on('error', function(e) {
-    alert('Error blyat');
+    alert('Скопіюйте, будь ласка, цей номер: (050) 609 39 88');
 });
 
 //
