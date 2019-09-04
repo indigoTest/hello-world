@@ -13,26 +13,26 @@ const ok = document.querySelector('.ok-button');
 const menuViber = document.querySelector('#menuViber');
 const adaptiveViber = document.querySelector('#adaptive-viber');
 
-function iosCopyToClipboard(el) {
-    var oldContentEditable = el.contentEditable,
-        oldReadOnly = el.readOnly,
-        range = document.createRange();
-
-    el.contentEditable = true;
-    el.readOnly = false;
-    range.selectNodeContents(document.createTextNode('fuck you viber'));
-
-    var s = window.getSelection();
-    s.removeAllRanges();
-    s.addRange(range);
-
-    el.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
-
-    el.contentEditable = oldContentEditable;
-    el.readOnly = oldReadOnly;
-
-    document.execCommand('copy');
-}
+// function iosCopyToClipboard(el) {
+//     var oldContentEditable = el.contentEditable,
+//         oldReadOnly = el.readOnly,
+//         range = document.createRange();
+//
+//     el.contentEditable = true;
+//     el.readOnly = false;
+//     range.selectNodeContents(el);
+//
+//     var s = window.getSelection();
+//     s.removeAllRanges();
+//     s.addRange(range);
+//
+//     el.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+//
+//     el.contentEditable = oldContentEditable;
+//     el.readOnly = oldReadOnly;
+//
+//     document.execCommand('copy');
+// }
 
 function updateClipboard(newClip) {
     navigator.clipboard.writeText(newClip).then(function() {
@@ -41,12 +41,6 @@ function updateClipboard(newClip) {
         /* clipboard write failed */
     });
 }
-
-const textarea = document.createElement('input');
-
-textarea.value = '10201200120';
-
-// console.log(ok);
 
 viber.addEventListener('click', () => {
    // qrBlock.classList.add('qr-block-active');
@@ -60,13 +54,24 @@ ok.addEventListener('click', () => {
     ok.classList.remove('button-cursor');
 });
 
+// if (window.navigator.platform === '')
+const clipboard = new ClipboardJS('#adaptive-viber');
 
-
-adaptiveViber.addEventListener('touchstart', () => {
-    iosCopyToClipboard(textarea);
-    alert('Номер скопійовано!');
+clipboard.on('success', function(e) {
+    alert('Suffering from success');
+    e.clearSelection();
 });
 
-menuViber.addEventListener('touchstart', () => {
-    alert('Номер скопійовано!');
+clipboard.on('error', function(e) {
+    alert('Error blyat');
 });
+
+//
+// adaptiveViber.addEventListener('touchstart', () => {
+//     iosCopyToClipboard(textarea);
+//     alert('Номер скопійовано!');
+// });
+//
+// menuViber.addEventListener('touchstart', () => {
+//     alert('Номер скопійовано!');
+// });
