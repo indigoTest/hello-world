@@ -19,6 +19,12 @@ body{
 }
 
 /*                   Header                   */
+#top{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 5;
+}
 
 .lang-font {
     font-size: 1.8vw;
@@ -81,6 +87,7 @@ body{
     display: none;
     background-color: white;
     position: sticky;
+    position: -webkit-sticky; /* Safari */
     top: 0;
 }
 
@@ -102,7 +109,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 /*.links-test{*/
@@ -224,6 +230,7 @@ body{
     border-bottom: 3px solid #4679ee;
     padding: 5px;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 
