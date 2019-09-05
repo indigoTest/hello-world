@@ -5,8 +5,8 @@ html {
 body{
     font-family: 'Montserrat', sans-serif;
     /*background-image: ;*/
-    background-size: cover;
-    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
     text-transform: uppercase;
 }
 
@@ -109,6 +109,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1vw 0;
 }
 
 /*.links-test{*/
@@ -390,24 +391,32 @@ a:visited {
     display: none;
 }
 
-/********************************First picture section************************************/
+/********************************Slider************************************/
 
-.overlay{
-    background-color: rgba(0,0,0,0.7);
-    z-index: 1;
+.swiper-container {
+    width: 100%;
+    height: 30vw;
+    margin-bottom: 2.5vw;
+    margin-top: 2.5vw;
+    align-items: center;
 }
 
-/*.background{*/
-/*    width: 100%;*/
-/*    height: 400px;*/
-/*    border-top: 3px solid #056cff;*/
-/*    border-bottom: 3px solid #056cff;*/
-/*}*/
+.swiper-slide{
+    background-position: center;
+    /*width: 1200px;*/
+    /*height: 600px;*/
+}
 
-.one {
-    background-image: url("../../../Images/main1.png");
-    background-attachment: fixed;
-    background-size: cover;
+.frankfurt{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../../../Images/spain1.png");
+}
+
+.koblenz{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../../../Images/german2.png");
+}
+
+.some-german-city{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../../../Images/german3.png");
 }
 
 /**************************************Partners*******************************************/
@@ -548,6 +557,7 @@ a:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 2.5vw;
 }
 
 .reviews-inner-container{
@@ -803,7 +813,7 @@ footer {
 .qr-active {
     opacity: 1;
     height: 60vh;
-    bottom: 30%;
+    bottom: 20%;
 }
 
 .qr-block-active {
@@ -849,11 +859,12 @@ rgba(0,0,0,0.5)
     left: 0;
     /*opacity: 0;*/
     /*position: absolute;*/
-    transition: height .5s ease, opacity .5s ease;
+    transition: height .2s ease, opacity .3s ease;
     /*top: -600px;*/
     width: 100%;
     background-color: white;
     border: 3px solid #4679ee;
+    padding-bottom: 20px;
 }
 
 .trips-hover-list-link {
@@ -896,7 +907,7 @@ rgba(0,0,0,0.5)
 }
 
 .trips-hover-item:hover .trips-hover-wrapper {
-    top: 20px;
+    top: 25px;
     height: 380px;
     /*display: block;*/
     opacity: 1;
@@ -912,11 +923,135 @@ rgba(0,0,0,0.5)
     transition: height .5s ease, opacity .5s ease;
 }
 
+/*********************************************************/
+
+.lessons-hover-list {
+    height: 0;
+    left: 0;
+    transition: height .5s ease, opacity .5s ease;
+    width: 100%;
+    background-color: white;
+    border: 3px solid #4679ee;
+}
+
+.lessons-hover-list-link {
+    display: block;
+    transition: height .5s ease, opacity .5s ease;
+    text-align: center;
+    margin: 5px 10px 10px;
+    color: #4679ee;
+    font-size: 1.3vw;
+}
+
+.lessons-hover-item:hover .lessons-arrow {
+    transform: rotate(180deg);
+    transition: .5s ease;
+}
+
+.lessons-hover-item:hover .lessons-hover-list {
+    top: 56px;
+    height: 15vw;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lessons-hover-list:hover {
+    top: 56px;
+    height: 15vw;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lessons-hover-wrapper {
+    padding-top: 36px;
+    position: absolute;
+    opacity: 0;
+    width: 157%;
+    transition: height .5s ease, opacity .5s ease;
+    top: -600px;
+    left: -22px
+}
+
+.lessons-hover-item:hover .lessons-hover-wrapper {
+    top: 31px;
+    height: 15vw;
+    opacity: 1;
+    transition: height .5s ease, opacity .5s ease;
+}
+
+.lessons-hover-wrapper:hover {
+    height: 15vw;
+    opacity: 1;
+    transition: height .5s ease, opacity .5s ease;
+}
+
+/*********************************************************/
+
+.education-hover-list {
+    height: 0;
+    left: 0;
+    transition: height .5s ease, opacity .5s ease;
+    width: 100%;
+    background-color: white;
+    border: 3px solid #4679ee;
+}
+
+.education-hover-list-link {
+    display: block;
+    transition: height .5s ease, opacity .5s ease;
+    padding: 15px 20px;
+    text-align: center;
+    color: #4679ee;
+    font-size: 1.3vw;
+}
+
+.education-hover-item:hover .education-arrow {
+    transform: rotate(180deg);
+}
+
+.education-hover-item:hover .education-hover-list {
+    top: 76px;
+    height: 10vw;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.education-hover-list:hover {
+    top: 76px;
+    height: 10vw;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.education-hover-wrapper {
+    padding-top: 36px;
+    position: absolute;
+    opacity: 0;
+    width: 115%;
+    transition: height .5s ease, opacity .5s ease;
+    top: -600px;
+}
+
+.education-hover-item:hover .education-hover-wrapper {
+    top: 47px;
+    height: 10vw;
+    opacity: 1;
+    transition: height .5s ease, opacity .5s ease;
+}
+
+.education-hover-wrapper:hover {
+    height: 10vw;
+    opacity: 1;
+    transition: height .5s ease, opacity .5s ease;
+}
+
+
 /******************** Media Requests *********************/
 
 @media (min-width: 320px) {
-
-
+    .swiper-container{
+        height: 60vw;
+    }
     .font-size-10{
         font-size: 8px;
     }
@@ -924,6 +1059,9 @@ rgba(0,0,0,0.5)
 
 
 @media (min-width: 480px) {
+    .swiper-container{
+        height: 60vw;
+    }
     .font-color-blue{
         font-size: 18px;
     }
@@ -970,7 +1108,9 @@ rgba(0,0,0,0.5)
 }
 
 @media (min-width: 540px) {
-
+    .swiper-container{
+        height: 60vw;
+    }
     .font-color-blue{
         font-size: 20px;
     }
@@ -1014,6 +1154,9 @@ rgba(0,0,0,0.5)
     }
 }
 @media (min-width: 720px) {
+    .swiper-container{
+        height: 60vw;
+    }
     .map-n-text{
         align-items: center;
     }
@@ -1097,6 +1240,9 @@ rgba(0,0,0,0.5)
 
 
 @media (min-width: 1080px) {
+    .swiper-container{
+        height: 40vw;
+    }
     .map-text-width{
         width: 22vw;
     }
@@ -1146,6 +1292,9 @@ rgba(0,0,0,0.5)
 
 }
 @media (min-width: 1280px) {
+    .swiper-container{
+        height: 30vw;
+    }
     .slogan-section{
         background-attachment: fixed;
     }
@@ -1206,6 +1355,9 @@ rgba(0,0,0,0.5)
 }
 
 @media (min-width: 1680px) {
+    .swiper-container{
+        height: 30vw;
+    }
     .slogan-section{
         background-attachment: fixed;
     }

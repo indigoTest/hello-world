@@ -37,7 +37,7 @@ document.addEventListener("scroll", () => {
 
 const signUpBtn = document.createElement('a');
 
-document.body.onclick = function({target}) {
+document.body.addEventListener('touchstart mousedown', function({target}) {
     if (target.classList.contains("button")) {
         signUpBtn.href = "#footer";
         signUpBtn.className = "button large-font font-color-white margin-top";
@@ -56,4 +56,4 @@ document.body.onclick = function({target}) {
             );
         }
     }
-};
+});

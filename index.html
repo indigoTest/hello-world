@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Reset/reset.css">
     <link rel="stylesheet" href="Fonts/Montserrat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="swiper-4.5.0/dist/css/swiper.css">
     <link rel="stylesheet" href="UKR/Main-Page/css/stylesheet.css">
 </head>
 <body>
@@ -57,6 +58,44 @@
                                     <hr class="hover-blue-line">
                                     <li class="trips-hover-list-item"><a class="trips-hover-list-link"
                                                                          href="././UKR/Trips-Page/index.html">Сша</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="trips-hover">
+                        <li class="lessons-hover-item"><a class="nav-bar-link" href="UKR/Price-jr/index.html">уроки<img
+                                class="lessons-arrow" src="Images/arrow.png"></a>
+                            <div class="lessons-hover-wrapper">
+                                <ul class="lessons-hover-list">
+                                    <li class="lessons-hover-list-item"><a class="lessons-hover-list-link"
+                                                                           href="././UKR/Price-Page/index.html"><span
+                                            class="nav-bar-line-break">для</span><span>дорослих</span></a></li>
+                                    <hr class="hover-blue-line">
+                                    <li class="lessons-hover-list-item"><a class="lessons-hover-list-link"
+                                                                           href="././UKR/Price-Page/index.html"><span
+                                            class="nav-bar-line-break">для</span><span>школярів</span></a></li>
+                                    <hr class="hover-blue-line">
+                                    <li class="lessons-hover-list-item"><a class="lessons-hover-list-link"
+                                                                           href="././UKR/Price-Page/index.html"><span
+                                            class="nav-bar-line-break">для</span><span>дошкілят</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="trips-hover">
+                        <li class="education-hover-item"><a class="nav-bar-link"
+                                                            href="UKR/Education-Page/index.html"><span
+                                class="nav-bar-line-break">освіта за</span><span>кордоном</span><img
+                                class="education-arrow" src="Images/arrow.png"></a>
+                            <div class="education-hover-wrapper">
+                                <ul class="education-hover-list">
+                                    <li class="education-hover-list-item"><a class="education-hover-list-link"
+                                                                             href="././UKR/Education-Page/index.html">вища</a>
+                                    </li>
+                                    <hr class="hover-blue-line">
+                                    <li class="education-hover-list-item"><a class="education-hover-list-link"
+                                                                             href="././UKR/Education-Page/index.html">середня</a>
                                     </li>
                                 </ul>
                             </div>
@@ -119,9 +158,30 @@
     </div>
 </header>
 
-<!-----------------------------------Partners-------------------------------------------->
-<div class="page-dimensions">
+<!------------------------------------Slider--------------------------------------------->
 
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide frankfurt"></div>
+        <div class="swiper-slide koblenz"></div>
+        <div class="swiper-slide some-german-city"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!--	<div class="swiper-scrollbar"></div>-->
+</div>
+
+<!-----------------------------------Partners-------------------------------------------->
+
+<div class="page-dimensions">
     <div id="hidden-wrapper">
 
         <section class="partners-section">
@@ -331,6 +391,7 @@
         </footer>
     </div>
 </div>
+<script src="swiper-4.5.0/dist/js/swiper.js"></script>
 <script src="clipboard.js-master/dist/clipboard.min.js"></script>
 <script src="UKR/Main-Page/js/script.js"></script>
 </body>
