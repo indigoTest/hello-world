@@ -37,7 +37,7 @@ document.addEventListener("scroll", () => {
 
 const signUpBtn = document.createElement('a');
 
-document.body.addEventListener('touchstart mousedown', function({target}) {
+document.body.onclick = function({target}) {
     if (target.classList.contains("button")) {
         signUpBtn.href = "#footer";
         signUpBtn.className = "button large-font font-color-white margin-top";
@@ -56,4 +56,25 @@ document.body.addEventListener('touchstart mousedown', function({target}) {
             );
         }
     }
-});
+};
+
+document.body.ontouchstart = function({target}) {
+    if (target.classList.contains("button")) {
+        signUpBtn.href = "#footer";
+        signUpBtn.className = "button large-font font-color-white margin-top";
+        if (target.innerText === "СХОВАТИ") {
+            target.innerText = "ДІЗНАТИСЯ БІЛЬШЕ";
+            signUpBtn.remove();
+            target.parentNode.parentNode.children[0].children[0].childNodes[1].classList.remove(
+                "active-text"
+            );
+        } else {
+            target.innerText = "Сховати";
+            signUpBtn.innerText = "Записатися";
+            target.after(signUpBtn);
+            target.parentNode.parentNode.children[0].children[0].childNodes[1].classList.add(
+                "active-text"
+            );
+        }
+    }
+};
