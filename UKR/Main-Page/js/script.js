@@ -1,39 +1,8 @@
 document.querySelector('.header-menu-bars').onclick = function () {
     this.classList.toggle('active');
     document.querySelector(".menu").classList.toggle('menu-active');
-    document.querySelector('#hidden-wrapper').classList.toggle('hidden-body');
+    document.body.classList.toggle('hidden-body');
 };
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-const mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    centeredSlides: true,
-    //delay
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: true,
-    },
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar'
-    // }
-});
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const viber = document.querySelector('#viber');
@@ -43,6 +12,37 @@ console.log(qr);
 const ok = document.querySelector('.ok-button');
 const menuViber = document.querySelector('#menuViber');
 const adaptiveViber = document.querySelector('#adaptive-viber');
+
+function iosCopyToClipboard(el) {
+    var oldContentEditable = el.contentEditable,
+        oldReadOnly = el.readOnly,
+        range = document.createRange();
+
+    el.contentEditable = true;
+    el.readOnly = false;
+    range.selectNodeContents(el);
+
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+
+    el.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+
+    el.contentEditable = oldContentEditable;
+    el.readOnly = oldReadOnly;
+
+    document.execCommand('copy');
+}
+
+function updateClipboard(newClip) {
+    navigator.clipboard.writeText(newClip).then(function() {
+        /* clipboard successfully set */
+    }, function() {
+        /* clipboard write failed */
+    });
+}
+
+// console.log(ok);
 
 viber.addEventListener('click', () => {
    // qrBlock.classList.add('qr-block-active');
@@ -56,15 +56,14 @@ ok.addEventListener('click', () => {
     ok.classList.remove('button-cursor');
 });
 
-const clipboard = new ClipboardJS('#adaptive-viber');
-
-clipboard.on('success', function(e) {
-    alert('Номер Вайберу скопійовано у буфер обміну!');
-    e.clearSelection();
+adaptiveViber.addEventListener('touchstart', () => {
+    iosCopyToClipboard('10230120301203012');
+    alert('Номер скопійовано!');
 });
 
-clipboard.on('error', function(e) {
-    alert('Скопіюйте, будь ласка, цей номер: (050) 609 39 88');
+menuViber.addEventListener('touchstart', () => {
+    iosCopyToClipboard('10230120301203012');
+    alert('Номер скопійовано!');
 });
 
 // -------------------- Anchor Section

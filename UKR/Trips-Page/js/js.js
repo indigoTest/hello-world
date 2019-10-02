@@ -37,11 +37,6 @@ document.addEventListener("scroll", () => {
 
 const signUpBtn = document.createElement('a');
 
-if (window.navigator.platform === 'IPhone'){
-    const header = document.querySelector('#top')
-    header.style.backgroundColor = 'red';
-}
-
 document.body.onclick = function({target}) {
     if (target.classList.contains("button")) {
         signUpBtn.href = "#footer";
